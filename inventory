@@ -1,0 +1,4 @@
+my_host ansible_host=FILLMEIN ansible_user=root
+
+[myhosts]
+my_host

@@ -1,0 +1,10 @@
+- hosts: myhosts
+  gather_facts: False
+  tasks:
+  - name: Install Python 2
+    raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+- hosts: myhosts
+  tasks:
+  - name: Upload a file
+    copy: src=run.sh dest=/tmp/run.sh
